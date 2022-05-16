@@ -13,7 +13,7 @@ struct NasaPODAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PODContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

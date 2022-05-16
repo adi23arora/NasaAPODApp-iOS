@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4891454B28326C2A00E1A418 /* NasaPODAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891454A28326C2A00E1A418 /* NasaPODAppApp.swift */; };
-		4891454D28326C2A00E1A418 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891454C28326C2A00E1A418 /* ContentView.swift */; };
 		4891454F28326C2B00E1A418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4891454E28326C2B00E1A418 /* Assets.xcassets */; };
 		4891455228326C2B00E1A418 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4891455128326C2B00E1A418 /* Preview Assets.xcassets */; };
 		4891455428326C2B00E1A418 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891455328326C2B00E1A418 /* Persistence.swift */; };
@@ -16,6 +15,7 @@
 		4891456128326C2B00E1A418 /* NasaPODAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891456028326C2B00E1A418 /* NasaPODAppTests.swift */; };
 		4891456B28326C2B00E1A418 /* NasaPODAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891456A28326C2B00E1A418 /* NasaPODAppUITests.swift */; };
 		4891456D28326C2B00E1A418 /* NasaPODAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891456C28326C2B00E1A418 /* NasaPODAppUITestsLaunchTests.swift */; };
+		4891457E28327A2D00E1A418 /* PODContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891457D28327A2D00E1A418 /* PODContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		4891454728326C2A00E1A418 /* NasaPODApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaPODApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4891454A28326C2A00E1A418 /* NasaPODAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODAppApp.swift; sourceTree = "<group>"; };
-		4891454C28326C2A00E1A418 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4891454E28326C2B00E1A418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4891455128326C2B00E1A418 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4891455328326C2B00E1A418 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		4891456628326C2B00E1A418 /* NasaPODAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaPODAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4891456A28326C2B00E1A418 /* NasaPODAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODAppUITests.swift; sourceTree = "<group>"; };
 		4891456C28326C2B00E1A418 /* NasaPODAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4891457D28327A2D00E1A418 /* PODContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,11 @@
 		4891454928326C2A00E1A418 /* NasaPODApp */ = {
 			isa = PBXGroup;
 			children = (
+				4891457C283279F900E1A418 /* Utility */,
+				4891457B283279F300E1A418 /* Model */,
+				4891457A283279E600E1A418 /* ViewModel */,
+				48914579283279E000E1A418 /* View */,
 				4891454A28326C2A00E1A418 /* NasaPODAppApp.swift */,
-				4891454C28326C2A00E1A418 /* ContentView.swift */,
 				4891454E28326C2B00E1A418 /* Assets.xcassets */,
 				4891455328326C2B00E1A418 /* Persistence.swift */,
 				4891455528326C2B00E1A418 /* NasaPODApp.xcdatamodeld */,
@@ -131,6 +134,35 @@
 				4891456C28326C2B00E1A418 /* NasaPODAppUITestsLaunchTests.swift */,
 			);
 			path = NasaPODAppUITests;
+			sourceTree = "<group>";
+		};
+		48914579283279E000E1A418 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4891457D28327A2D00E1A418 /* PODContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4891457A283279E600E1A418 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4891457B283279F300E1A418 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4891457C283279F900E1A418 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4891455428326C2B00E1A418 /* Persistence.swift in Sources */,
-				4891454D28326C2A00E1A418 /* ContentView.swift in Sources */,
+				4891457E28327A2D00E1A418 /* PODContentView.swift in Sources */,
 				4891455728326C2B00E1A418 /* NasaPODApp.xcdatamodeld in Sources */,
 				4891454B28326C2A00E1A418 /* NasaPODAppApp.swift in Sources */,
 			);
