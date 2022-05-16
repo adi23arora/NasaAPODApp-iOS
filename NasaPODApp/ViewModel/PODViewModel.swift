@@ -12,10 +12,11 @@ class PODViewModel: ObservableObject {
     @Published var isLoading = true
     @Published var podData: NasaPODResponse? = nil
     @Published var podImage: UIImage? = nil
-    private let service = NasaPODService()
+    private let coreDataRepository = NasaPODDataRepository()
+    private let apiRepository = NasaPODAPIRepository()
 
     func fetchPODData() {
-        service.fetchPODDetails { data in
+        apiRepository.fetchPODDetails { data in
             if let podData = data {
                 self.podData = podData
                 self.fetchPODImage(url: podData.url)
@@ -24,7 +25,7 @@ class PODViewModel: ObservableObject {
     }
 
     func fetchPODImage(url: String) {
-        service.fetchPODImage(imageUrl: url) { image in
+        apiRepository.fetchPODImage(imageUrl: url) { image in
             if let podImage = image {
                 self.podImage = podImage
                 self.isLoading = false

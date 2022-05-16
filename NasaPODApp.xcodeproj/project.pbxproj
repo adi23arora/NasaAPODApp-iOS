@@ -18,8 +18,10 @@
 		4891457E28327A2D00E1A418 /* PODContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891457D28327A2D00E1A418 /* PODContentView.swift */; };
 		4891458028327B6300E1A418 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891457F28327B6300E1A418 /* HTTPClient.swift */; };
 		4891458228327C9100E1A418 /* NasaPODResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458128327C9100E1A418 /* NasaPODResponse.swift */; };
-		4891458528327EB400E1A418 /* NasaPODService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458428327EB400E1A418 /* NasaPODService.swift */; };
+		4891458528327EB400E1A418 /* NasaPODAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458428327EB400E1A418 /* NasaPODAPIRepository.swift */; };
 		48914587283283F000E1A418 /* PODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48914586283283F000E1A418 /* PODViewModel.swift */; };
+		4891458C283289EC00E1A418 /* NasaPODRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458B283289EC00E1A418 /* NasaPODRepository.swift */; };
+		4891458E28328A4400E1A418 /* NasaPODDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458D28328A4400E1A418 /* NasaPODDataRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +56,10 @@
 		4891457D28327A2D00E1A418 /* PODContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODContentView.swift; sourceTree = "<group>"; };
 		4891457F28327B6300E1A418 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		4891458128327C9100E1A418 /* NasaPODResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODResponse.swift; sourceTree = "<group>"; };
-		4891458428327EB400E1A418 /* NasaPODService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODService.swift; sourceTree = "<group>"; };
+		4891458428327EB400E1A418 /* NasaPODAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODAPIRepository.swift; sourceTree = "<group>"; };
 		48914586283283F000E1A418 /* PODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODViewModel.swift; sourceTree = "<group>"; };
+		4891458B283289EC00E1A418 /* NasaPODRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODRepository.swift; sourceTree = "<group>"; };
+		4891458D28328A4400E1A418 /* NasaPODDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODDataRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,7 @@
 		4891454928326C2A00E1A418 /* NasaPODApp */ = {
 			isa = PBXGroup;
 			children = (
-				4891458328327E6900E1A418 /* Service */,
+				4891458328327E6900E1A418 /* Resource */,
 				4891457C283279F900E1A418 /* Utility */,
 				4891457B283279F300E1A418 /* Model */,
 				4891457A283279E600E1A418 /* ViewModel */,
@@ -177,12 +181,38 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		4891458328327E6900E1A418 /* Service */ = {
+		4891458328327E6900E1A418 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				4891458428327EB400E1A418 /* NasaPODService.swift */,
+				4891458A283289CD00E1A418 /* Repository */,
+				48914589283289BC00E1A418 /* CoreDataRepository */,
+				48914588283289A100E1A418 /* APIRepository */,
 			);
-			path = Service;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		48914588283289A100E1A418 /* APIRepository */ = {
+			isa = PBXGroup;
+			children = (
+				4891458428327EB400E1A418 /* NasaPODAPIRepository.swift */,
+			);
+			path = APIRepository;
+			sourceTree = "<group>";
+		};
+		48914589283289BC00E1A418 /* CoreDataRepository */ = {
+			isa = PBXGroup;
+			children = (
+				4891458D28328A4400E1A418 /* NasaPODDataRepository.swift */,
+			);
+			path = CoreDataRepository;
+			sourceTree = "<group>";
+		};
+		4891458A283289CD00E1A418 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4891458B283289EC00E1A418 /* NasaPODRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,12 +347,14 @@
 			files = (
 				4891455428326C2B00E1A418 /* Persistence.swift in Sources */,
 				4891458028327B6300E1A418 /* HTTPClient.swift in Sources */,
-				4891458528327EB400E1A418 /* NasaPODService.swift in Sources */,
+				4891458528327EB400E1A418 /* NasaPODAPIRepository.swift in Sources */,
 				4891457E28327A2D00E1A418 /* PODContentView.swift in Sources */,
 				48914587283283F000E1A418 /* PODViewModel.swift in Sources */,
 				4891455728326C2B00E1A418 /* NasaPODApp.xcdatamodeld in Sources */,
 				4891454B28326C2A00E1A418 /* NasaPODAppApp.swift in Sources */,
 				4891458228327C9100E1A418 /* NasaPODResponse.swift in Sources */,
+				4891458C283289EC00E1A418 /* NasaPODRepository.swift in Sources */,
+				4891458E28328A4400E1A418 /* NasaPODDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

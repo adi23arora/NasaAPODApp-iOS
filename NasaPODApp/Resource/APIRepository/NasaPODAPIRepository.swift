@@ -1,5 +1,5 @@
 //
-//  NasaPODService.swift
+//  NasaPODAPIRepository.swift
 //  NasaPODApp
 //
 //  Created by Aditya Arora on 16/05/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NasaPODService {
+class NasaPODAPIRepository: NasaPODAPIResourceRepository {
     struct APIConstants {
         static let podUrl = "https://api.nasa.gov/planetary/apod?api_key=PSGjqKkc2MtgH7pskf4FHfgS5JSxsyFGnnPYhmTZ"
     }
