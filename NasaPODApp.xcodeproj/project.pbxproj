@@ -18,6 +18,7 @@
 		4891457E28327A2D00E1A418 /* PODContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891457D28327A2D00E1A418 /* PODContentView.swift */; };
 		4891458028327B6300E1A418 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891457F28327B6300E1A418 /* HTTPClient.swift */; };
 		4891458228327C9100E1A418 /* NasaPODResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458128327C9100E1A418 /* NasaPODResponse.swift */; };
+		4891458528327EB400E1A418 /* NasaPODService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458428327EB400E1A418 /* NasaPODService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4891457D28327A2D00E1A418 /* PODContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODContentView.swift; sourceTree = "<group>"; };
 		4891457F28327B6300E1A418 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		4891458128327C9100E1A418 /* NasaPODResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODResponse.swift; sourceTree = "<group>"; };
+		4891458428327EB400E1A418 /* NasaPODService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		4891454928326C2A00E1A418 /* NasaPODApp */ = {
 			isa = PBXGroup;
 			children = (
+				4891458328327E6900E1A418 /* Service */,
 				4891457C283279F900E1A418 /* Utility */,
 				4891457B283279F300E1A418 /* Model */,
 				4891457A283279E600E1A418 /* ViewModel */,
@@ -169,6 +172,14 @@
 				4891457F28327B6300E1A418 /* HTTPClient.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		4891458328327E6900E1A418 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4891458428327EB400E1A418 /* NasaPODService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			files = (
 				4891455428326C2B00E1A418 /* Persistence.swift in Sources */,
 				4891458028327B6300E1A418 /* HTTPClient.swift in Sources */,
+				4891458528327EB400E1A418 /* NasaPODService.swift in Sources */,
 				4891457E28327A2D00E1A418 /* PODContentView.swift in Sources */,
 				4891455728326C2B00E1A418 /* NasaPODApp.xcdatamodeld in Sources */,
 				4891454B28326C2A00E1A418 /* NasaPODAppApp.swift in Sources */,
