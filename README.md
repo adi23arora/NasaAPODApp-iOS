@@ -14,6 +14,7 @@ All the usecases given in the problem statement are implemented.
 
 (No third party dependencies are used in this project)
 
+---
 
 ### Areas of Improvement:
 
@@ -24,3 +25,15 @@ These are some of the improvements that could be covered:
 - Writing Unit & UI test cases
 - Some enhancements to the UI, especially the error handling part. As of now, I have just added a UIAlert to show the error message.
 - Adding a CI-CD pipeline to automate the build & testing process.
+
+---
+
+### Screenshots:
+
+<table>
+ <tr>
+  <td> <img src="./screenshots/Screenshot-main.png" width="200"> </td>
+  <td> <img src="./screenshots/Screenshot-oldPOD.png" width="200"> </td>
+  <td> <img src="./screenshots/Screenshot-noData.png" width="200"> </td> 
+ </tr>
+</table>
