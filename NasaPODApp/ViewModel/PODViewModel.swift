@@ -15,11 +15,27 @@ class PODViewModel: ObservableObject {
     private let coreDataRepository = NasaPODDataRepository()
     private let apiRepository = NasaPODAPIRepository()
 
+    private func fetchCachedPODData() {
+        coreDataRepository.fetchPODDetails { data in
+            if let podData = data {
+                self.podData = podData
+                self.isLoading = false
+                self.coreDataRepository.fetchPODImage(imageUrl: "") { image in
+                    if let podImage = image {
+                        self.podImage = podImage
+                    }
+                }
+            }
+        }
+    }
+
     func fetchPODData() {
         apiRepository.fetchPODDetails { data in
             if let podData = data {
                 self.podData = podData
                 self.fetchPODImage(url: podData.url)
+            } else {
+                self.fetchCachedPODData()
             }
         }
     }
@@ -29,6 +45,12 @@ class PODViewModel: ObservableObject {
             if let podImage = image {
                 self.podImage = podImage
                 self.isLoading = false
+                if let podData = self.podData {
+                    self.coreDataRepository.saveNasaPODData(podData: podData,
+                                                            image: podImage)
+                }
+            } else {
+                self.fetchCachedPODData()
             }
         }
     }
