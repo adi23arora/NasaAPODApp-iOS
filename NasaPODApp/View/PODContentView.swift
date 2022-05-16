@@ -8,36 +8,55 @@
 import SwiftUI
 
 struct PODContentView: View {
+    @StateObject var viewModel: PODViewModel = PODViewModel()
     var body: some View {
         NavigationView {
             VStack {
-                Text("POD Title")
+                Text(viewModel.podData?.title ?? "")
                     .font(.title)
                     .fontWeight(.medium)
                     .multilineTextAlignment(.center)
                     .padding([.leading, .bottom, .trailing])
 
+                ZStack {
+                    VStack{
+                        Spacer()
+                        if viewModel.isLoading {
+                            ProgressView()
+                        }
+                        Spacer()
+                    }
+                    if let image = viewModel.podImage {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 250, height: 250)
+                            .clipped()
+                    }
+                }
                 
-                Image(uiImage: UIImage())
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 250, height: 250)
-                    .clipped()
+                Text(viewModel.podData?.date ?? "")
+                    .italic()
+                    .padding(.horizontal)
                 
-                Text("POD Date")                    .padding(.horizontal)
+                ScrollView {
+                    VStack {
+                        Text(viewModel.podData?.explanation ?? "")
+                            .font(.body)
+                            .fontWeight(.regular)
+                            .multilineTextAlignment(.center)
+                            .padding(.all)
+                    }
+                }
                 
-                
-                Text("POD Explanation")
-                    .font(.body)
-                    .fontWeight(.regular)
-                    .multilineTextAlignment(.center)
-                    .padding(.all)
-                                    
                 Spacer()
             }
-                .padding()
-                .navigationTitle("NASA - Photo of Day")
-                .navigationBarTitleDisplayMode(.inline)
+            .padding()
+            .navigationTitle("NASA - Photo of Day")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        .onAppear {
+            viewModel.fetchPODData()
         }
     }
 }

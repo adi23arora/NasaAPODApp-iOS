@@ -19,6 +19,7 @@
 		4891458028327B6300E1A418 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891457F28327B6300E1A418 /* HTTPClient.swift */; };
 		4891458228327C9100E1A418 /* NasaPODResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458128327C9100E1A418 /* NasaPODResponse.swift */; };
 		4891458528327EB400E1A418 /* NasaPODService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4891458428327EB400E1A418 /* NasaPODService.swift */; };
+		48914587283283F000E1A418 /* PODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48914586283283F000E1A418 /* PODViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4891457F28327B6300E1A418 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		4891458128327C9100E1A418 /* NasaPODResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODResponse.swift; sourceTree = "<group>"; };
 		4891458428327EB400E1A418 /* NasaPODService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaPODService.swift; sourceTree = "<group>"; };
+		48914586283283F000E1A418 /* PODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		4891457A283279E600E1A418 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				48914586283283F000E1A418 /* PODViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				4891458028327B6300E1A418 /* HTTPClient.swift in Sources */,
 				4891458528327EB400E1A418 /* NasaPODService.swift in Sources */,
 				4891457E28327A2D00E1A418 /* PODContentView.swift in Sources */,
+				48914587283283F000E1A418 /* PODViewModel.swift in Sources */,
 				4891455728326C2B00E1A418 /* NasaPODApp.xcdatamodeld in Sources */,
 				4891454B28326C2A00E1A418 /* NasaPODAppApp.swift in Sources */,
 				4891458228327C9100E1A418 /* NasaPODResponse.swift in Sources */,
