@@ -58,6 +58,10 @@ struct PODContentView: View {
         .onAppear {
             viewModel.fetchPODData()
         }
+        .alert(viewModel.alertMessage,
+               isPresented: $viewModel.showAlert) {
+            Button("OK", role: .cancel) {}
+        }
     }
 }
 
